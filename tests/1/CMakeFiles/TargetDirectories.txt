@@ -1,0 +1,3 @@
+/home/whispher/Documentos/OpenCV/teste/CMakeFiles/edit_cache.dir
+/home/whispher/Documentos/OpenCV/teste/CMakeFiles/rebuild_cache.dir
+/home/whispher/Documentos/OpenCV/teste/CMakeFiles/teste1.dir

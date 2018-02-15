@@ -1,0 +1,3 @@
+/home/whispher/Documentos/OpenCV/tests/4/CMakeFiles/edit_cache.dir
+/home/whispher/Documentos/OpenCV/tests/4/CMakeFiles/rebuild_cache.dir
+/home/whispher/Documentos/OpenCV/tests/4/CMakeFiles/convert_to_png.dir

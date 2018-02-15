@@ -1,0 +1,6 @@
+cmake_minimum_required(VERSION 2.8)
+project( convert_to_png )
+find_package( OpenCV REQUIRED)
+include_directories( ${OpenCV_INCLUDE_DIRS} )
+add_executable( convert_to_png convert_to_png.cpp)
+target_link_libraries( convert_to_png ${OpenCV_LIBS} )
