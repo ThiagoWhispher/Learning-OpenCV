@@ -14,9 +14,43 @@
 1. **Overview**
 	1. **What is OpenCV?**
         * OpenCV is an open source computer vision library [...], written in C and C++. The library was designed for computational efficiency and with a strong focus on real-time applications.
-        * One of OpenCV’s goals is to provide a simple-to-use computer vision infrastructure that helps people build fairly sophisticated vision applications quickly. Th e OpenCV library contains over 500 functions that span many areas in vision, including factory product inspection, medical imaging, security, user interface, camera calibration, stereo
-vision, and robotics.
+        * One of OpenCV’s goals is to provide a simple-to-use computer vision infrastructure that helps people build fairly sophisticated vision applications quickly. Th e OpenCV library contains over 500 functions that span many areas in vision, including factory product inspection, medical imaging, security, user interface, camera calibration, stereo vision, and robotics.
 	2. **Who uses OpenCV?**
-        * The open source license for OpenCV has been structured such that you can build a commercial product using all or part of OpenCV. [...] In part because of these liberal licensing terms, there is a large user community that includes people from major companies (IBM, Microsoft , Intel, SONY, Siemens, and Google, to name only a few) and research centers (such as Stanford, MIT, CMU, Cambridge, and INRIA). OpenCV is popular around the world, with large user communities in China, Japan,
-Russia, Europe, and Israel.
+        * The open source license for OpenCV has been structured such that you can build a commercial product using all or part of OpenCV. [...] In part because of these liberal licensing terms, there is a large user community that includes people from major companies (IBM, Microsoft , Intel, SONY, Siemens, and Google, to name only a few) and research centers (such as Stanford, MIT, CMU, Cambridge, and INRIA). OpenCV is popular around the world, with large user communities in China, Japan, Russia, Europe, and Israel.
             * Yahoo group (OpenCV): [Link here](http://groups.yahoo.com/group/OpenCV)
+
+## *OpenCV Library*
+1. **Includes**
+    * core section, as here are defined the basic building blocks of the library.
+        * Example: *#include <opencv2/core.hpp>*
+    * highgui module, as this contains the functions for input and output operations.
+        * Example: *#include <opencv2/highgui.hpp> ]*
+    * iostream - to facilitate console line output and input.
+        * Example: *#include <iostream>*
+
+2. **Methods**
+    * **imread** - function which loads the image name specified.
+        * Example:  *imread(<path image>, <format image>)*
+        * First argument - path image
+        * Second argument - specifies the format in what want the image
+            * **IMREAD_UNCHANGED** (<0) loads the image as is (including the alpha channel if present)
+            * **IMREAD_GRAYSCALE** ( 0) loads the image as an intensity one
+            * **IMREAD_COLOR** (>0) loads the image in the RGB format
+    * **namedWindows** - create an OpenCV window.
+        * Example: *namedWindows(<windows name>, <windows propriety>)*
+        * First argument - Windows name
+        * Second argument - Windows propriety
+            * **WINDOW_AUTOSIZE** - only supported one if you do not use the Qt backend. In this case the window size will take up the size of the image it shows and no resize permitted.
+            * **WINDOW_NORMAL** - on Qt you may use this to allow window resize. The image will resize itself according to the current window size. By using the | operator you also need to specify if you would like the image to keep its aspect ratio (*WINDOW_KEEPRATIO*) or not (*WINDOW_FREERATIO*).
+    * **imshow** - update the content of the OpenCV window with a new image.
+        * Example: *imshow(<windows name>, <image>)*
+    * **waitKey** - function that displays a window until the user presses a key (0) or up to x measure of milliseconds (x).
+        * Example: *waitKey(0 or x)*
+
+3. **Objects**
+    * **Mat** - object that will store the data of the loaded image.
+        * Example: Mat <variable name>
+
+4. **Observations**
+    1. To avoid data structure and function name conflicts with other libraries, OpenCV has its own namespace: cv.
+        * *using namespace cv*
