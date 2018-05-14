@@ -36,7 +36,11 @@ int main(){
     cout << "Matriz identity" << endl;
     cout << I << endl << endl;
 
+    Mat V = (Mat_<double>(2,3) << 0, 1, 2, 3, 4, 5);
+    cout << "Matriz initialize for values" << endl;
+    cout << V << endl << endl;
 
+    
 
 
     return 0;
